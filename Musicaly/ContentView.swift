@@ -34,7 +34,8 @@ struct MusicPlayer : View {
     @State var width : CGFloat = 0
     @State var songs = ["Elevate","Can't"]
     @State var current = 0
-    
+    @State var finish = false
+    @State var del = AVDelegate()
     
     var body: some View{
         
@@ -115,6 +116,14 @@ struct MusicPlayer : View {
                     }
                     else{
                         
+                        if self.finish{
+                            
+                            self.player.currentTime = 0
+                            self.width = 0
+                            self.finish = false
+                        }
+                        
+                        
                         self.player.play()
                         self.playing = true
                         
@@ -122,7 +131,7 @@ struct MusicPlayer : View {
                     
                 }) {
                     
-                    Image(systemName: self.playing ? "pause.fill" :
+                    Image(systemName: self.playing && !self.finish ? "pause.fill" :
                             "play.fill").font(.title)
                 }
                 // here we can press to move the song forward 15 seconds...
@@ -168,6 +177,8 @@ struct MusicPlayer : View {
             
             self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
             
+            self.player.delegate = self.del
+            
             // prepare the player to player here...
             self.player.prepareToPlay()
             self.getData()
@@ -185,6 +196,12 @@ struct MusicPlayer : View {
                     self.width = screen * CGFloat(value)
                     
                 }
+            }
+            
+            NotificationCenter.default.addObserver(forName: NSNotification.Name("Finish"), object: nil, queue: .main) { (_) in
+                
+                self.finish = true
+                
             }
         }
     }
@@ -215,6 +232,8 @@ struct MusicPlayer : View {
         
         self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
         
+        self.player.delegate = self.del
+        
         self.data = .init(count: 0)
         
         self.title = ""
@@ -224,10 +243,19 @@ struct MusicPlayer : View {
         self.getData()
         
         self.playing = true
+        self.finish = false
+        
         self.width = 0
         
         self.player.play()
+    }
+}
+
+class AVDelegate: NSObject,AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         
+        NotificationCenter.default.post(name: NSNotification.Name("Finish"), object: nil)
     }
 }
 
