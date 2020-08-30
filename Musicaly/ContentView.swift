@@ -12,7 +12,11 @@ import AVKit
 struct ContentView: View {
     var body: some View {
         
-        MusicPlayer()
+        NavigationView{
+            
+            MusicPlayer().navigationTitle("Music Player")
+        }
+        
     }
 }
 
@@ -34,7 +38,13 @@ struct MusicPlayer : View {
             
             Image(uiImage: self.data.count == 0 ? UIImage(named: "Drake")! :
                     UIImage(data: self.data)!)
-        }
+                .resizable()
+                .frame(width: self.data.count == 0 ? 250 : nil, height: 250)
+                .cornerRadius(15)
+            
+            Text(self.title).font(.title).padding(.top)
+            
+        }.padding()
         .onAppear {
             self.getData()
             
@@ -54,7 +64,7 @@ struct MusicPlayer : View {
                 self.data = data
             }
             
-            if i.commonKey?.rawValue == "Drake"{
+            if i.commonKey?.rawValue == "title"{
                 
                 let title = i.value as! String
                 self.title = title
