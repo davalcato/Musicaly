@@ -29,6 +29,9 @@ struct MusicPlayer : View {
     
     @State var data : Data = .init(count: 0)
     @State var title = ""
+    @State var player : AVAudioPlayer!
+    @State var playing = false
+    @State var width : CGFloat = 0
     
     
     var body: some View{
@@ -45,13 +48,80 @@ struct MusicPlayer : View {
             
             ZStack(alignment: .leading) {
                 
+                // here we fill in the capsule inicator
                 Capsule().fill(Color.black.opacity(0.08)).frame(height: 8)
                 
                 Capsule().fill(Color.red).frame(width: 200, height: 8)
             }
             
+            .padding(.top)
+            // add the forward and backwards button here
+            
+            // and place distance between the button icons
+            HStack(spacing: UIScreen.main.bounds.width / 5 - 30){
+                
+                Button(action: {
+                    
+                }) {
+                    
+                    Image(systemName: "backward.fill").font(.title)
+                }
+                
+                Button(action: {
+                    
+                }) {
+                    
+                    Image(systemName: "gobackward.15").font(.title)
+                }
+                // here we toggle between play and pause
+                Button(action: {
+                    
+                    if self.player.isPlaying{
+                        
+                        self.player.pause()
+                        self.playing = false
+                    }
+                    else{
+                        
+                        self.player.play()
+                        self.playing = true
+                        
+                    }
+                    
+                }) {
+                    
+                    Image(systemName: self.playing ? "pause.fill" :
+                            "play.fill").font(.title)
+                }
+                
+                Button(action: {
+                    
+                }) {
+                    
+                    Image(systemName: "goforward.15").font(.title)
+                }
+                
+                Button(action: {
+                    
+                }) {
+                    
+                    Image(systemName: "forward.fill").font(.title)
+                }
+                
+            }.padding(.top,25)
+            
+            // icon buttons here...
+            .foregroundColor(.black)
+            
         }.padding()
         .onAppear {
+            
+            let url = Bundle.main.path(forResource: "Elevate", ofType: "mp3")
+            
+            self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
+            
+            // prepare the player to player here...
+            self.player.prepareToPlay()
             self.getData()
             
         }
@@ -59,8 +129,7 @@ struct MusicPlayer : View {
     
     func getData(){
         
-        let url = Bundle.main.path(forResource: "Can't", ofType: "mp3")
-        let asset = AVAsset(url: URL(fileURLWithPath: url!))
+        let asset = AVAsset(url: self.player.url!)
         
         for i in asset.commonMetadata{
             
