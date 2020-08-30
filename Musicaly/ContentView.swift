@@ -54,6 +54,24 @@ struct MusicPlayer : View {
                 Capsule().fill(Color.black.opacity(0.08)).frame(height: 8)
                 
                 Capsule().fill(Color.red).frame(width: self.width, height: 8)
+                    .gesture(DragGesture()
+                                .onChanged({ (value) in
+                                    
+                                    let x = value.location.x
+                                    
+                                    self.width = x
+                                    
+                                }).onEnded({ (value) in
+                                    
+                                    let x = value.location.x
+                                    
+                                    let screen = UIScreen.main.bounds.width - 30
+                                    
+                                    let percent = x / screen
+                                    
+                                    self.player.currentTime = Double(percent) * self.player.duration
+                                    
+                                }))
             }
             
             .padding(.top)
@@ -204,6 +222,9 @@ struct MusicPlayer : View {
         // prepare the player to player here...
         self.player.prepareToPlay()
         self.getData()
+        
+        self.playing = true
+        self.width = 0
         
         self.player.play()
         
