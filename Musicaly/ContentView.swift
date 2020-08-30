@@ -32,6 +32,8 @@ struct MusicPlayer : View {
     @State var player : AVAudioPlayer!
     @State var playing = false
     @State var width : CGFloat = 0
+    @State var songs = ["Elevate","Can't"]
+    @State var current = 0
     
     
     var body: some View{
@@ -51,7 +53,7 @@ struct MusicPlayer : View {
                 // here we fill in the capsule inicator
                 Capsule().fill(Color.black.opacity(0.08)).frame(height: 8)
                 
-                Capsule().fill(Color.red).frame(width: 200, height: 8)
+                Capsule().fill(Color.red).frame(width: self.width, height: 8)
             }
             
             .padding(.top)
@@ -62,12 +64,24 @@ struct MusicPlayer : View {
                 
                 Button(action: {
                     
+                    if self.current > 0{
+                        
+                        self.current -= 1
+                        
+                        self.ChangeSongs()
+                    }
+                    
                 }) {
                     
                     Image(systemName: "backward.fill").font(.title)
                 }
                 
+                // here we can rewind the song back by 15 seconds...
+                
                 Button(action: {
+                    
+                    self.player.currentTime -= 15
+                    
                     
                 }) {
                     
@@ -93,8 +107,16 @@ struct MusicPlayer : View {
                     Image(systemName: self.playing ? "pause.fill" :
                             "play.fill").font(.title)
                 }
+                // here we can press to move the song forward 15 seconds...
                 
                 Button(action: {
+                    
+                    let increase = self.player.currentTime + 15
+                    
+                    if increase < self.player.duration{
+                        
+                        self.player.currentTime = increase
+                    }
                     
                 }) {
                     
@@ -102,6 +124,14 @@ struct MusicPlayer : View {
                 }
                 
                 Button(action: {
+                    
+                    if self.songs.count - 1 != self.current{
+                        
+                        self.current += 1
+                        
+                        self.ChangeSongs()
+                    }
+                    
                     
                 }) {
                     
@@ -116,7 +146,7 @@ struct MusicPlayer : View {
         }.padding()
         .onAppear {
             
-            let url = Bundle.main.path(forResource: "Elevate", ofType: "mp3")
+            let url = Bundle.main.path(forResource: self.songs[self.current], ofType: "mp3")
             
             self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
             
@@ -129,7 +159,12 @@ struct MusicPlayer : View {
                 
                 if self.player.isPlaying{
                     
-                    print(self.player.currentTime)
+                    // follows the duration of the song with red...
+                    let screen = UIScreen.main.bounds.width - 30
+                    
+                    let value = self.player.currentTime / self.player.duration
+                    
+                    self.width = screen * CGFloat(value)
                     
                 }
             }
@@ -154,6 +189,24 @@ struct MusicPlayer : View {
                 self.title = title
             }
         }
+    }
+    
+    func ChangeSongs(){
+        
+        let url = Bundle.main.path(forResource: self.songs[self.current], ofType: "mp3")
+        
+        self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
+        
+        self.data = .init(count: 0)
+        
+        self.title = ""
+        
+        // prepare the player to player here...
+        self.player.prepareToPlay()
+        self.getData()
+        
+        self.player.play()
+        
     }
 }
 
