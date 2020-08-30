@@ -16,7 +16,6 @@ struct ContentView: View {
             
             MusicPlayer().navigationTitle("Music Player")
         }
-        
     }
 }
 
@@ -43,6 +42,13 @@ struct MusicPlayer : View {
                 .cornerRadius(15)
             
             Text(self.title).font(.title).padding(.top)
+            
+            ZStack(alignment: .leading) {
+                
+                Capsule().fill(Color.black.opacity(0.08)).frame(height: 8)
+                
+                Capsule().fill(Color.red).frame(width: 200, height: 8)
+            }
             
         }.padding()
         .onAppear {
