@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4313CC6B013281280423F0 /* Pods_Musicaly_MusicalyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FD2AB1A50B8A61D60EDDB2 /* Pods_Musicaly_MusicalyUITests.framework */; };
+		45768A6C28CE35FFB6F3ADB5 /* Pods_Musicaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E0115D248C01C08010FAD /* Pods_Musicaly.framework */; };
 		752F2DB224F99B2B001FA5A1 /* MusicalyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F2DB124F99B2B001FA5A1 /* MusicalyApp.swift */; };
 		752F2DB424F99B2B001FA5A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F2DB324F99B2B001FA5A1 /* ContentView.swift */; };
 		752F2DB624F99B2E001FA5A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752F2DB524F99B2E001FA5A1 /* Assets.xcassets */; };
 		752F2DB924F99B2E001FA5A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752F2DB824F99B2E001FA5A1 /* Preview Assets.xcassets */; };
 		752F2DC424F99B2E001FA5A1 /* MusicalyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F2DC324F99B2E001FA5A1 /* MusicalyTests.swift */; };
 		752F2DCF24F99B2E001FA5A1 /* MusicalyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F2DCE24F99B2E001FA5A1 /* MusicalyUITests.swift */; };
+		75CDA96524FC2CD50072DC28 /* Elevate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75CDA96424FC2CD50072DC28 /* Elevate.mp3 */; };
+		75CDA96724FC2CFC0072DC28 /* Can't.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75CDA96624FC2CFC0072DC28 /* Can't.mp3 */; };
+		F9D00029FE7DAB670ED05CA5 /* Pods_MusicalyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEDD564327DA8792BBB3EF8 /* Pods_MusicalyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03FD2AB1A50B8A61D60EDDB2 /* Pods_Musicaly_MusicalyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musicaly_MusicalyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238460379D1457FAD5396961 /* Pods-Musicaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicaly.debug.xcconfig"; path = "Target Support Files/Pods-Musicaly/Pods-Musicaly.debug.xcconfig"; sourceTree = "<group>"; };
+		3CE576C749FAF71ACB8A0DBC /* Pods-MusicalyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicalyTests.release.xcconfig"; path = "Target Support Files/Pods-MusicalyTests/Pods-MusicalyTests.release.xcconfig"; sourceTree = "<group>"; };
 		752F2DAE24F99B2B001FA5A1 /* Musicaly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicaly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752F2DB124F99B2B001FA5A1 /* MusicalyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalyApp.swift; sourceTree = "<group>"; };
 		752F2DB324F99B2B001FA5A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +53,14 @@
 		752F2DCA24F99B2E001FA5A1 /* MusicalyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicalyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		752F2DCE24F99B2E001FA5A1 /* MusicalyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalyUITests.swift; sourceTree = "<group>"; };
 		752F2DD024F99B2E001FA5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75CDA96424FC2CD50072DC28 /* Elevate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Elevate.mp3; sourceTree = "<group>"; };
+		75CDA96624FC2CFC0072DC28 /* Can't.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Can't.mp3"; sourceTree = "<group>"; };
+		97A3B607C8E97A3DDF8AC366 /* Pods-Musicaly-MusicalyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicaly-MusicalyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Musicaly-MusicalyUITests/Pods-Musicaly-MusicalyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BEDD564327DA8792BBB3EF8 /* Pods_MusicalyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicalyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3E0115D248C01C08010FAD /* Pods_Musicaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musicaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83AF01D7B18ACCB961B540A /* Pods-Musicaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicaly.release.xcconfig"; path = "Target Support Files/Pods-Musicaly/Pods-Musicaly.release.xcconfig"; sourceTree = "<group>"; };
+		EC59FCCF2F75A42B9B085FE9 /* Pods-Musicaly-MusicalyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicaly-MusicalyUITests.release.xcconfig"; path = "Target Support Files/Pods-Musicaly-MusicalyUITests/Pods-Musicaly-MusicalyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EF6E331A083D004C40355700 /* Pods-MusicalyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicalyTests.debug.xcconfig"; path = "Target Support Files/Pods-MusicalyTests/Pods-MusicalyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45768A6C28CE35FFB6F3ADB5 /* Pods_Musicaly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D00029FE7DAB670ED05CA5 /* Pods_MusicalyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4313CC6B013281280423F0 /* Pods_Musicaly_MusicalyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6774A3FCA91E8FC298B9340E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				238460379D1457FAD5396961 /* Pods-Musicaly.debug.xcconfig */,
+				B83AF01D7B18ACCB961B540A /* Pods-Musicaly.release.xcconfig */,
+				97A3B607C8E97A3DDF8AC366 /* Pods-Musicaly-MusicalyUITests.debug.xcconfig */,
+				EC59FCCF2F75A42B9B085FE9 /* Pods-Musicaly-MusicalyUITests.release.xcconfig */,
+				EF6E331A083D004C40355700 /* Pods-MusicalyTests.debug.xcconfig */,
+				3CE576C749FAF71ACB8A0DBC /* Pods-MusicalyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E3A2BC51E88F0CAFC28E051 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E3E0115D248C01C08010FAD /* Pods_Musicaly.framework */,
+				03FD2AB1A50B8A61D60EDDB2 /* Pods_Musicaly_MusicalyUITests.framework */,
+				9BEDD564327DA8792BBB3EF8 /* Pods_MusicalyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		752F2DA524F99B2B001FA5A1 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +121,8 @@
 				752F2DC224F99B2E001FA5A1 /* MusicalyTests */,
 				752F2DCD24F99B2E001FA5A1 /* MusicalyUITests */,
 				752F2DAF24F99B2B001FA5A1 /* Products */,
+				6774A3FCA91E8FC298B9340E /* Pods */,
+				6E3A2BC51E88F0CAFC28E051 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +139,7 @@
 		752F2DB024F99B2B001FA5A1 /* Musicaly */ = {
 			isa = PBXGroup;
 			children = (
+				75CDA95F24FC27F00072DC28 /* Music */,
 				752F2DB124F99B2B001FA5A1 /* MusicalyApp.swift */,
 				752F2DB324F99B2B001FA5A1 /* ContentView.swift */,
 				752F2DB524F99B2E001FA5A1 /* Assets.xcassets */,
@@ -130,6 +175,15 @@
 			path = MusicalyUITests;
 			sourceTree = "<group>";
 		};
+		75CDA95F24FC27F00072DC28 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				75CDA96424FC2CD50072DC28 /* Elevate.mp3 */,
+				75CDA96624FC2CFC0072DC28 /* Can't.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 752F2DD324F99B2E001FA5A1 /* Build configuration list for PBXNativeTarget "Musicaly" */;
 			buildPhases = (
+				04CB582D9EFDA7C8FA02777A /* [CP] Check Pods Manifest.lock */,
 				752F2DAA24F99B2B001FA5A1 /* Sources */,
 				752F2DAB24F99B2B001FA5A1 /* Frameworks */,
 				752F2DAC24F99B2B001FA5A1 /* Resources */,
+				8076181B925A6D5185A5E53E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 752F2DD624F99B2E001FA5A1 /* Build configuration list for PBXNativeTarget "MusicalyTests" */;
 			buildPhases = (
+				D99E6CBECB36FADF0C0FADCD /* [CP] Check Pods Manifest.lock */,
 				752F2DBB24F99B2E001FA5A1 /* Sources */,
 				752F2DBC24F99B2E001FA5A1 /* Frameworks */,
 				752F2DBD24F99B2E001FA5A1 /* Resources */,
@@ -172,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 752F2DD924F99B2E001FA5A1 /* Build configuration list for PBXNativeTarget "MusicalyUITests" */;
 			buildPhases = (
+				2840411E2B8AD386E3E0EC55 /* [CP] Check Pods Manifest.lock */,
 				752F2DC624F99B2E001FA5A1 /* Sources */,
 				752F2DC724F99B2E001FA5A1 /* Frameworks */,
 				752F2DC824F99B2E001FA5A1 /* Resources */,
+				9F0237CBE5CB69A3FE9EE1FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,8 +292,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75CDA96724FC2CFC0072DC28 /* Can't.mp3 in Resources */,
 				752F2DB924F99B2E001FA5A1 /* Preview Assets.xcassets in Resources */,
 				752F2DB624F99B2E001FA5A1 /* Assets.xcassets in Resources */,
+				75CDA96524FC2CD50072DC28 /* Elevate.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +314,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04CB582D9EFDA7C8FA02777A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Musicaly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2840411E2B8AD386E3E0EC55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Musicaly-MusicalyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8076181B925A6D5185A5E53E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicaly/Pods-Musicaly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicaly/Pods-Musicaly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Musicaly/Pods-Musicaly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0237CBE5CB69A3FE9EE1FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicaly-MusicalyUITests/Pods-Musicaly-MusicalyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Musicaly-MusicalyUITests/Pods-Musicaly-MusicalyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Musicaly-MusicalyUITests/Pods-Musicaly-MusicalyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D99E6CBECB36FADF0C0FADCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicalyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		752F2DAA24F99B2B001FA5A1 /* Sources */ = {
@@ -414,6 +578,7 @@
 		};
 		752F2DD424F99B2E001FA5A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238460379D1457FAD5396961 /* Pods-Musicaly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,6 +601,7 @@
 		};
 		752F2DD524F99B2E001FA5A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83AF01D7B18ACCB961B540A /* Pods-Musicaly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +624,7 @@
 		};
 		752F2DD724F99B2E001FA5A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF6E331A083D004C40355700 /* Pods-MusicalyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +647,7 @@
 		};
 		752F2DD824F99B2E001FA5A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CE576C749FAF71ACB8A0DBC /* Pods-MusicalyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +670,7 @@
 		};
 		752F2DDA24F99B2E001FA5A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97A3B607C8E97A3DDF8AC366 /* Pods-Musicaly-MusicalyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +691,7 @@
 		};
 		752F2DDB24F99B2E001FA5A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC59FCCF2F75A42B9B085FE9 /* Pods-Musicaly-MusicalyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

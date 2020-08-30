@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AVKit
+
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        
+        MusicPlayer()
     }
 }
 
@@ -18,3 +21,55 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+struct MusicPlayer : View {
+    
+    @State var data : Data = .init(count: 0)
+    @State var title = ""
+    
+    
+    var body: some View{
+        
+        VStack(spacing: 20){
+            
+            Image(uiImage: self.data.count == 0 ? UIImage(named: "Drake")! :
+                    UIImage(data: self.data)!)
+        }
+        .onAppear {
+            self.getData()
+            
+        }
+    }
+    
+    func getData(){
+        
+        let url = Bundle.main.path(forResource: "Can't", ofType: "mp3")
+        let asset = AVAsset(url: URL(fileURLWithPath: url!))
+        
+        for i in asset.commonMetadata{
+            
+            if i.commonKey?.rawValue == "artwork"{
+                
+                let data = i.value as! Data
+                self.data = data
+            }
+            
+            if i.commonKey?.rawValue == "Drake"{
+                
+                let title = i.value as! String
+                self.title = title
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
