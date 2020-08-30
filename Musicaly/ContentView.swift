@@ -124,6 +124,15 @@ struct MusicPlayer : View {
             self.player.prepareToPlay()
             self.getData()
             
+            // here we follow the time flow of the song...
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
+                
+                if self.player.isPlaying{
+                    
+                    print(self.player.currentTime)
+                    
+                }
+            }
         }
     }
     
